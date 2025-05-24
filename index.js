@@ -7,7 +7,13 @@ app.set('view engine','ejs');
 
 
 app.get('/',function(req,res){
-   res.render("index")
+    var nome = 'João Victor';
+    var curso = 'Sistemas de Informação'
+   res.render("index",{
+    nome: nome,
+    curso: curso,
+    idade: 25
+   })
 })
 
 app.get('/login', function(req,res){
