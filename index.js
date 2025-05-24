@@ -6,13 +6,14 @@ const app = express();
 app.set('view engine','ejs'); 
 
 
-app.get('/',function(req,res){
+app.get('/:idade',function(req,res){ //Neste caso será obrigatório passar a idade
     var nome = 'João Victor';
-    var curso = 'Sistemas de Informação'
+    var curso = 'Sistemas de Informação';
+    var idade = req.params.idade;
    res.render("index",{
     nome: nome,
     curso: curso,
-    idade: 25
+    idade: idade
    })
 })
 

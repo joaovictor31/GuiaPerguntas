@@ -10,7 +10,12 @@
     <p>Fico feliz em ter você aqui. Aproveite a visita!</p>
     <p>Seu nome é: <%= nome %> </p>
     <p> Você faz o curso de: <%= curso %> </p>
-    <p>Sua idade é: <%= idade %> </p>
-  
+    <p> Sua idade é <%= idade %> </p>
+
+    <% if (idade >= 18) {%>
+        <p>Você pode beber</p>
+  <%} else {%>
+    <p>Menor de idade, Não pode beber</p>
+    <%}%>
 </body>
 </html>
