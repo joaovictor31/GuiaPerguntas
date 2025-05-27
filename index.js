@@ -10,10 +10,19 @@ app.get('/:idade',function(req,res){ //Neste caso será obrigatório passar a id
     var nome = 'João Victor';
     var curso = 'Sistemas de Informação';
     var idade = req.params.idade;
+
+    //Adicionando estrutura de repetição
+    var cursos = [
+        {nome: 'Engenharia Mecânica', qtdAlunos: 25},
+        {nome: 'Odontologia', qtdAlunos: 30},
+        {nome: 'Pedagogia', qtdAlunos: 44}
+    ]
+
    res.render("index",{
     nome: nome,
     curso: curso,
-    idade: idade
+    idade: idade,
+    cursos:cursos
    })
 })
 

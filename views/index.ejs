@@ -17,5 +17,13 @@
   <%} else {%>
     <p>Menor de idade, Não pode beber</p>
     <%}%>
+
+    <% cursos.forEach(function(cursos,preco,tabela) { %>
+        <hr>
+        <h2><%= cursos.nome %></h2>
+        <h2><%= cursos.qtdAlunos %></h2>
+    <% }) %> 
+    
+   
 </body>
 </html>
