@@ -5,6 +5,9 @@ const app = express();
 //Dizer para o express usar o EJS como view engine
 app.set('view engine','ejs'); 
 
+// Para servir arquivos estáticos da pasta 'public'
+app.use(express.static('public'));
+
 
 app.get('/:idade',function(req,res){ //Neste caso será obrigatório passar a idade
     var nome = 'João Victor';
